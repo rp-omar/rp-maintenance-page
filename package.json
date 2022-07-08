@@ -1,0 +1,14 @@
+{
+  "name": "rp-maintenance-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.1.5"
+  },
+  "scripts": {
+    "watch:css": "npx tailwindcss -i ./src/input.css -o ./src/main.css --watch",
+    "watch:html": "npx live-server ./src",
+    "build": "rm -rf dist && npx tailwindcss -i ./src/input.css -o ./dist/main.css && cp ./src/index.html ./dist/index.html && cp -R src/assets/ dist/assets"
+  }
+}
